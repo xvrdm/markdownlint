@@ -678,3 +678,12 @@ rule "MD046", "Code block style" do
     )
   end
 end
+
+rule "MD060", "More than one sentence in line" do
+  tags :whitespace, :emphasis
+  aliases 'single-sentence'
+  check do |doc|
+	  doc.matching_text_element_lines(/\. ./).sort
+  end
+end
+
