@@ -683,7 +683,7 @@ rule "MD060", "More than one sentence in line" do
   tags :whitespace, :emphasis
   aliases 'single-sentence'
   check do |doc|
-	  doc.matching_text_element_lines(/(?<!i\.e|e\.g)\. ./).sort
+	  doc.matching_text_element_lines(/(?<!i\.e|e\.g\d)\. ./).sort
   end
 end
 
